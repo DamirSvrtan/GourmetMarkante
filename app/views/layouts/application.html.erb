@@ -2,44 +2,48 @@
 <html>
 <head>
   <title>GourmetMarkante</title>
-  <%= stylesheet_link_tag    "application","custom.css", "orbit-1.2.3", :media => "all" %>
+  <%= stylesheet_link_tag "application","custom.css", "orbit-1.2.3", :media => "all" %>
   <%= javascript_include_tag "application", "jquery.orbit-1.2.3" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="wrap_all" style="background-color:black">
+
 	<img src="assets/header.png"/>
+
 	<div id="featured" style="margin-top:-6px;"> 
 		<img src="assets/1.jpg" data-caption="#htmlCaption"/>
 		<img src="assets/2.jpg" data-caption="#htmlCaption"/>
 	</div>
 
 	<span class="orbit-caption" id="htmlCaption">
-	<div style="position:relative;top:10px">
+		<span class="menu-bar-el">
+			<img id="menu-bar-el-1" src="assets/kontakt.png"/>
+			<img id="menu-bar-el-2" src="assets/Speisekarte.png"/>
+			<img id="menu-bar-el-3" src="assets/bilder galerie.png"/>
+		</span>
+		<span class="menu-bar-el-hover">
+			<a href="/"><img id="menu-bar-el-hover-1"  src="assets/kontakt on hoover.png"/></a>
+			<a href="/speisekarte"><img id="menu-bar-el-hover-2" src="assets/speisekarte on hoover.png"/></a>
+			<a href="/galerie"><img id="menu-bar-el-hover-3" src="assets/bilder galerie hoover.png"/></a>
+		</span>
 
-		<img class="menu-bar-el" id="menu-bar-el-1" src="assets/kontakt.png"/>
-		<img class="menu-bar-el" id="menu-bar-el-2" src="assets/Speisekarte.png"/>
-		<img class="menu-bar-el" id="menu-bar-el-3" src="assets/bilder galerie.png"/>
-
-		<a href="/"><img class="menu-bar-el-hover" id="menu-bar-el-hover-1"  src="assets/kontakt on hoover.png"/></a>
-		<a href="/speisekarte"><img class="menu-bar-el-hover" id="menu-bar-el-hover-2" src="assets/speisekarte on hoover.png"/></a>
-		<a href="/galerie"><img class="menu-bar-el-hover" id="menu-bar-el-hover-3" src="assets/bilder galerie hoover.png"/></a>
-	</div>
 	</span>
-<div id="circle_index">
 
-</div>
+	<div id="circle_index">
+
+	</div>
 </div>
 </body>
 <script type="text/javascript">
      $(window).load(function() {
          $('#featured').orbit();
-         $('.menu-bar-el').hover(function(){
-					$('.menu-bar-el-hover').hide();
+         $('.menu-bar-el img').hover(function(){
+					$('.menu-bar-el-hover img').hide();
 					$('#menu-bar-el-hover-'+this.id.slice(-1)).show();
 						});
 	 $('.orbit-caption').mouseleave(function(){
-					$('.menu-bar-el-hover').hide();
+					$('.menu-bar-el-hover img').hide();
 	 });
      });
 </script>

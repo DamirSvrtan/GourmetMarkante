@@ -21,33 +21,25 @@ div#wrap_all{
 	left:-480px;
 	top:-7px;
 	
-	.menu-bar-el{
+	span.menu-bar-el img{
 		position:absolute;
 		left:0px;	
 	}
-	.menu-bar-el-hover{
+	span.menu-bar-el-hover img{
 		position:absolute;
 		display:none;
 		left:0px;
 	}
-	#menu-bar-el-1{
-		margin-top:80px;
+	#menu-bar-el-1, #menu-bar-el-hover-1{
+		margin-top:90px;
 	}
-	#menu-bar-el-2{
-		margin-top:120px;
+	#menu-bar-el-2, #menu-bar-el-hover-2{
+		margin-top:130px;
 	}
-	#menu-bar-el-3{
-		margin-top:160px;
+	#menu-bar-el-3, #menu-bar-el-hover-3{
+		margin-top:170px;
 	}
-	#menu-bar-el-hover-1{
-		margin-top:80px;
-	}
-	#menu-bar-el-hover-2{
-		margin-top:120px;
-	}
-	#menu-bar-el-hover-3{
-		margin-top:160px;
-	}
+
 }
 
 div#circle_index{
